@@ -61,3 +61,6 @@ typings/
 .next
 
 public
+.cache
+
+ .DS_Store

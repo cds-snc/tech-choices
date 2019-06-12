@@ -1,10 +1,10 @@
 ---
 path: "/mongo"
-title: "My first blog post"
-_tags: ["animals", "Chicago", "zoos"]
+title: MongoDB"
+_tags: ["database", "sql"]
 slug: "mongo"
 purpose: "page"
 date: "2019-01-01"
 ---
 
-Hello Mongo
+This will be info about MongoDB

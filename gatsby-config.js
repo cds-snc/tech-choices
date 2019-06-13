@@ -18,7 +18,15 @@ module.exports = {
         chunkSize: 10000 // default: 1000
       }
     },
-    `gatsby-plugin-styled-components`,
+
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: process.env.NODE_ENV !== `production`,
+        fileName: false
+      }
+    },
+
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
     {

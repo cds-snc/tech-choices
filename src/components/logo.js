@@ -1,6 +1,5 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
 
 const Logo = () => (
   <StaticQuery
@@ -13,7 +12,9 @@ const Logo = () => (
       }
     `}
     render={data => {
-      return <img src={data.file.publicURL } />;
+      return (
+        <img alt="Canadian Digital Service logo" src={data.file.publicURL} />
+      );
     }}
   />
 );

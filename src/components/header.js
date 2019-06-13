@@ -5,20 +5,15 @@ import Logo from "./logo";
 const searchIndices = [{ name: `Pages`, title: `Pages`, hitComp: `PageHit` }];
 
 const Header = ({ site, transparent }) => (
-  <header role="banner" class="site-header">
-    <div class="wrapper">
+  <div>
+    <Logo />
+
+    {/*<Heading fontSize={[4, 5, 6]}>Header</Heading> */ }
+
+    <div>
       <Search collapse indices={searchIndices} />
-      <div class="logo">
-        <Logo /> The logo
-        <a href="/">
-          <img
-            alt="Candain Digital Service logo"
-            src="/images/gatsby-icon.png"
-          />
-        </a>
-      </div>
     </div>
-  </header>
+  </div>
 );
 
 export default Header;

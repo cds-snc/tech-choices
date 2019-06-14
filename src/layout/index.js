@@ -23,17 +23,19 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <ThemeProvider theme={theme}>
-        <>
+        <div className="wrapper" >
           <GlobalStyles />
           <Header siteTitle={data.site.siteMetadata.title} />
-          <Container maxWidth="700px" px={3}>
-          <Search collapse indices={searchIndices} />
-            <main>{children}</main>
-            <Box mt={3}>
-              <footer>© {new Date().getFullYear()}</footer>
+          <Container maxWidth="900px" px={3}>
+            <Box className="main-content">
+              <Search collapse indices={searchIndices} />
+              <main>{children}</main>
+            </Box>
+            <Box mt={3} as="footer">
+              © {new Date().getFullYear()}
             </Box>
           </Container>
-        </>
+        </div>
       </ThemeProvider>
     )}
   />

@@ -11,7 +11,7 @@ const pageQuery = `{
           frontmatter {
             title
             slug
-            _tags
+            tags
           }
           excerpt(pruneLength: 5000)
         }
@@ -30,7 +30,7 @@ const postQuery = `{
             title
             slug
             date(formatString: "MMM D, YYYY")
-            _tags
+            tags
           }
           excerpt(pruneLength: 5000)
         }

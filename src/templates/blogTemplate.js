@@ -7,12 +7,11 @@ export default function Template({
   data // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark;
+  const { html } = markdownRemark;
   return (
     <Layout>
       <Box
-        fontSize={[1, 3]}
-        className="blog-post-content"
+        fontSize={[1, 2]}
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </Layout>

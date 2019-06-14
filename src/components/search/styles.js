@@ -77,10 +77,10 @@ export const Input = styled("input")(
     fontSize: [1, 3],
     padding: [2],
     width: "100%",
-    color: "grey.200",
+    color: "grey.900",
     bg: "white",
     "&:hover": {
-      color: "grey.600"
+      color: "grey.700"
     }
   })
 );
@@ -110,6 +110,7 @@ export const HitsWrapper = styled.div`
   z-index: 2;
   -webkit-overflow-scrolling: touch;
   position: absolute;
+  color:#3c4043;
   right: 0;
   top: calc(100% + 0.5em);
   width: 80vw;
@@ -117,15 +118,15 @@ export const HitsWrapper = styled.div`
   box-shadow: 0 0 5px 0;
   padding: 0.7em 1em 0.4em;
   background: white;
-  border-radius: ${props => props.theme.smallBorderRadius};
+  border-radius: 2px;
   > * + * {
     padding-top: 1em !important;
-    border-top: 2px solid ${props => props.theme.darkGray};
+    border-top: 2px solid #ccc;
   }
   li + li {
     margin-top: 0.7em;
     padding-top: 0.7em;
-    border-top: 1px solid ${props => props.theme.lightGray};
+    border-top: 1px solid #ccc;
   }
   * {
     margin-top: 0;
@@ -135,8 +136,8 @@ export const HitsWrapper = styled.div`
     list-style: none;
   }
   mark {
-    color: ${props => props.theme.lightBlue};
-    background: ${props => props.theme.darkBlue};
+    color: black;
+    background: yellow;
   }
   header {
     display: flex;
@@ -144,9 +145,9 @@ export const HitsWrapper = styled.div`
     margin-bottom: 0.3em;
     h3 {
       color: white;
-      background: ${props => props.theme.gray};
+      background: #999;
       padding: 0.1em 0.4em;
-      border-radius: ${props => props.theme.smallBorderRadius};
+      border-radius: 2px;
     }
   }
   h3 {

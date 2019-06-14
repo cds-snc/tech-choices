@@ -1,7 +1,7 @@
 ---
 path: "/mongo"
-title: MongoDB"
-_tags: ["database", "sql"]
+title: MongoDB
+tags: ["database", "sql"]
 slug: "mongo"
 purpose: "page"
 date: "2019-01-01"

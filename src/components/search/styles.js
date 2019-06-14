@@ -65,7 +65,7 @@ export const SearchWrapper = styled("form")(
   })
 );
 
-export const Form = styled("form")(
+export const FormWrap = styled("div")(
   css({
     display: "flex",
     position:"relative"

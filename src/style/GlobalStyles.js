@@ -67,6 +67,11 @@ const GlobalStyles = createGlobalStyle`
     margin-bottom:3em;
   }
 
+  .product a{
+    color:#fff;
+    font-weight:bold;
+  }
+
   .product h3{
     color:#fff;
     font-size:1.5em;

@@ -1,11 +1,11 @@
 import React from "react";
 import { connectSearchBox } from "react-instantsearch-dom";
 
-import { SearchIcon, Form, Input, SearchWrapper } from "./styles";
+import { SearchIcon, FormWrap, Input, SearchWrapper } from "./styles";
 
 export default connectSearchBox(({ refine, ...rest }) => (
   <SearchWrapper>
-    <Form>
+    <FormWrap>
       <Input
         type="text"
         placeholder="Search"
@@ -14,6 +14,6 @@ export default connectSearchBox(({ refine, ...rest }) => (
         {...rest}
       />
       <SearchIcon />
-    </Form>
+    </FormWrap>
   </SearchWrapper>
 ));

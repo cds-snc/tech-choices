@@ -35,9 +35,6 @@ const useClickOutside = (ref, handler, events) => {
 };
 
 export default function Search({ indices, collapse, hitsAsGrid }) {
-
-  
-
   const ref = createRef();
   const [query, setQuery] = useState(``);
   const [focus, setFocus] = useState(false);

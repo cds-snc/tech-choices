@@ -1,7 +1,8 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
+import { Box } from "../style";
 
-const Logo = () => (
+const CDSLogo = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -13,9 +14,11 @@ const Logo = () => (
     `}
     render={data => {
       return (
-        <img alt="Canadian Digital Service logo" src={data.file.publicURL} />
+        <Box width={[200, 268]}>
+          <img alt="Canadian Digital Service logo" src={data.file.publicURL} />
+        </Box>
       );
     }}
   />
 );
-export default Logo;
+export default CDSLogo;

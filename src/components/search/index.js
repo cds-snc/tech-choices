@@ -6,7 +6,6 @@ import {
   connectStateResults
 } from "react-instantsearch-dom";
 import algoliasearch from "algoliasearch/lite";
-
 import { Root, HitsWrapper, PoweredBy } from "./styles";
 import Input from "./Input";
 import * as hitComps from "./hitComps";
@@ -36,6 +35,9 @@ const useClickOutside = (ref, handler, events) => {
 };
 
 export default function Search({ indices, collapse, hitsAsGrid }) {
+
+  
+
   const ref = createRef();
   const [query, setQuery] = useState(``);
   const [focus, setFocus] = useState(false);

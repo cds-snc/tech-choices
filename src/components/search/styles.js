@@ -1,5 +1,6 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import css from "@styled-system/css";
 import { Search } from "styled-icons/fa-solid/Search";
 import { Algolia } from "styled-icons/fa-brands/Algolia";
 
@@ -12,8 +13,12 @@ export const Root = styled.div`
 export const SearchIcon = styled(Search)`
   width: 1em;
   pointer-events: none;
+  position: absolute;
+  top: 15px;
+  right: 10px;
 `;
 
+/*
 const focus = css`
   background: white;
   color: ${props => props.theme.darkBlue};
@@ -24,7 +29,9 @@ const focus = css`
     margin: 0.3em;
   }
 `;
+*/
 
+/*
 const collapse = css`
   width: 0;
   cursor: pointer;
@@ -39,7 +46,8 @@ const collapse = css`
     color: ${props => props.theme.gray};
   }
 `;
-
+*/
+/*
 const expand = css`
   background: ${props => props.theme.veryLightGray};
   width: 6em;
@@ -49,23 +57,51 @@ const expand = css`
     margin: 0.3em;
   }
 `;
+*/
 
+export const SearchWrapper = styled("form")(
+  css({
+    mt: [4]
+  })
+);
+
+export const Form = styled("form")(
+  css({
+    display: "flex",
+    position:"relative"
+  })
+);
+
+export const Input = styled("input")(
+  css({
+    fontSize: [1, 3],
+    padding: [2],
+    width: "100%",
+    color: "grey.200",
+    bg: "white",
+    "&:hover": {
+      color: "grey.600"
+    }
+  })
+);
+
+/*
 export const Input = styled.input`
   outline: none;
   border: none;
   font-size: 1em;
-  background: transparent;
-  transition: ${props => props.theme.shortTrans};
+  background: somecolour;
+  
+`;
+*/
+
+/*
+//transition: ${props => props.theme.shortTrans};
   border-radius: ${props => props.theme.smallBorderRadius};
   {hightlight-next-line}
   ${props => (props.collapse ? collapse : expand)};
-`;
 
-export const Form = styled.form`
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-`;
+*/
 
 export const HitsWrapper = styled.div`
   display: ${props => (props.show ? `grid` : `none`)};
@@ -77,7 +113,7 @@ export const HitsWrapper = styled.div`
   right: 0;
   top: calc(100% + 0.5em);
   width: 80vw;
-  max-width: 30em;
+  max-width: 41.5em;
   box-shadow: 0 0 5px 0;
   padding: 0.7em 1em 0.4em;
   background: white;

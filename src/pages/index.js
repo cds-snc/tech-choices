@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <h2>Pages</h2>
-      <div className="product">
+      <div className="products-main">
         {posts &&
           posts.map(post => {
             const title = post.node.frontmatter.title;

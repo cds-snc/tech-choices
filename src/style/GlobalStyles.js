@@ -67,6 +67,10 @@ const GlobalStyles = createGlobalStyle`
     margin-bottom:3em;
   }
 
+  .product a{
+    color:#fff;
+  }
+
   .products-main{
     background-color:#f6f8fa;
     padding:50px;

@@ -113,8 +113,8 @@ export const HitsWrapper = styled.div`
   color:#3c4043;
   right: 0;
   top: calc(100% + 0.5em);
-  width: 80vw;
-  max-width: 41.5em;
+  width: 100vw;
+  max-width: 54em;
   box-shadow: 0 0 5px 0;
   padding: 0.7em 1em 0.4em;
   background: white;

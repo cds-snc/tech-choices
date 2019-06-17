@@ -3,6 +3,8 @@ import Layout from "../layout";
 import SEO from "../components/seo";
 import { Link } from "gatsby";
 import { Box } from "../style";
+import Img from "gatsby-image";
+import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => {
   console.log(data);
@@ -14,12 +16,16 @@ const IndexPage = ({ data }) => {
       <div className="products-main">
         {posts &&
           posts.map(post => {
-            const title = post.node.frontmatter.title;
-            const path = post.node.frontmatter.path;
+            const { path, title } = post.node.frontmatter;
+            const image = post.node.frontmatter.image.childImageSharp.fixed;
+
             return (
               <div className="markdown" key={path}>
                 <Box mt={[2, 3]} py={[2]}>
-                  <Link to={path}>{title}</Link>
+                  <Link to={path}>
+                    {title}
+                    <Img fixed={image} />
+                  </Link>
                 </Box>
               </div>
             );
@@ -39,11 +45,25 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___title], order: DESC }) {
       edges {
         node {
-          excerpt
-          html
           frontmatter {
             path
             title
+            image {
+              childImageSharp {
+                fixed(width: 200) {
+                  width
+                  height
+                  base64
+                  tracedSVG
+                  aspectRatio
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                  originalName
+                }
+              }
+            }
           }
         }
       }

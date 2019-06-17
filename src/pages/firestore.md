@@ -5,6 +5,7 @@ tags: ["database"]
 slug: "firestore"
 purpose: "page"
 date: "2019-01-01"
+image: "../images/firebase.png"
 ---
 
 ## Firestore
@@ -12,7 +13,9 @@ date: "2019-01-01"
 <div class="product">
 
 ### Pros
+
 - Quick setup
+- Free Tier
 
 ### Cons
 

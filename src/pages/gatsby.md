@@ -5,6 +5,7 @@ tags: ["static", "react"]
 slug: "gatsbyjs"
 purpose: "page"
 date: "2019-01-01"
+image: "../images/gatsby.png"
 ---
 
 ## GatsbyJS

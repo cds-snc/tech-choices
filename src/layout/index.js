@@ -3,7 +3,7 @@ import GlobalStyles from "../style/GlobalStyles";
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import Header from "../components/Header";
+import Header from "../components/header";
 import Search from "../components/search";
 const searchIndices = [{ name: `Pages`, title: `Products`, hitComp: `PageHit` }];
 

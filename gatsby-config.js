@@ -2,14 +2,8 @@ const queries = require("./src/utils/algolia");
 
 require("dotenv").config();
 
-module.exports = {
-  siteMetadata: {
-    title: `CDS Tech Choices`,
-    description: `Work In Progress`,
-    author: `@gatsbyjs`
-  },
-  plugins: [
-    {
+/*
+{
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
@@ -22,6 +16,15 @@ module.exports = {
         ]
       }
     },
+*/
+
+module.exports = {
+  siteMetadata: {
+    title: `CDS Tech Choices`,
+    description: `Work In Progress`,
+    author: `@gatsbyjs`
+  },
+  plugins: [
     {
       resolve: `gatsby-plugin-algolia`,
       options: {

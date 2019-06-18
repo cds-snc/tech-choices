@@ -10,20 +10,24 @@ image: "../images/big-query.png"
 
 ## Big Query
 
-Summary orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+Big Query is a platform as a service by Google for big data sets. You can use SQL on the data to extract information.
 
 <div class="product">
 
 ### Pros
 
-- This will be info about BigQuery orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+- Can handle very large sets of data (hundreds of GB and TB)
 
-- Taboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- Queries are fast compared to the amount of data
+
+- Excellent for append only scenarios 
 
 ### Cons
 
-- Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+- Very expensive. Each query will scan the entire table and not use an index. Currently each TB of data analyzed costs $5.
 
-- Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- Does not use indexes. Combined with the SQL syntax you may think you want to use it like a relational database, but you should not - that it not the use case.
+
+- Update queries are very slow and will not work if a simulataneous look up is happening.
 
 <div>

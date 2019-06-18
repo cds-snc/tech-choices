@@ -1,5 +1,5 @@
 import * as styledComponents from "styled-components";
-import { space, layout, typography, color } from 'styled-system'
+import { space, layout, typography, color, border, width } from "styled-system";
 import { theme } from "./theme";
 
 const {
@@ -16,8 +16,30 @@ const Box = styled.div`
   ${layout}
   ${typography}
   ${color}
+  ${border}
+  ${width}
 `;
 
-export { css, createGlobalStyle, keyframes, ThemeProvider, theme, Box };
+const Container = styled.div(
+  {
+    margin: "0 auto",
+    maxWidth: 900
+  },
+  space,
+  layout,
+  typography,
+  color
+);
+
+export {
+  css,
+  createGlobalStyle,
+  keyframes,
+  ThemeProvider,
+  theme,
+  Box,
+  Container
+};
+
 export * from "styled-system";
 export default styled;

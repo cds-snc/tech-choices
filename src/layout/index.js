@@ -1,10 +1,9 @@
-import { ThemeProvider, theme } from "../style";
+import { ThemeProvider, theme, Box, Container } from "../style";
 import GlobalStyles from "../style/GlobalStyles";
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import Header from "../components/Header";
-import { Box, Container } from "../grid";
 import Search from "../components/search";
 const searchIndices = [{ name: `Pages`, title: `Pages`, hitComp: `PageHit` }];
 
@@ -23,10 +22,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <ThemeProvider theme={theme}>
-        <div className="wrapper" >
+        <div className="wrapper">
           <GlobalStyles />
           <Header siteTitle={data.site.siteMetadata.title} />
-          <Container maxWidth="900px" px={3}>
+          <Container>
             <Box className="main-content">
               <Search collapse indices={searchIndices} />
               <main>{children}</main>

@@ -7,13 +7,16 @@ export default function Template({
   data // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { html } = markdownRemark;
+  let { html } = markdownRemark;
+
+  //console.log(html);
+
+  html = html.replace(new RegExp("<li>", "g"), "<li><span>");
+  html = html.replace(new RegExp("</li>", "g"), "</span></li>");
+
   return (
     <Layout>
-      <Box
-        fontSize={[1, 2]}
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <Box fontSize={[1, 2]} dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   );
 }

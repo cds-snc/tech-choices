@@ -83,21 +83,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .product ul li{
-    color: #fff;
+    color: #f0ca4d;
     line-height:1.5em;
-    list-style: none;
   }
 
-  .product ul li:before {
-    content:'•';
-    display: block;
-    position: relative;
-    max-width: 0px;
-    max-height: 0px;
-    left: -25px;
-    top: 17px;
-    color: #f0ca4d;
-    font-size: 20px;
+  .product ul li span{
+    color: #fff;
   }
 
   h2 ~ p{

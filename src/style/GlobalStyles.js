@@ -71,15 +71,6 @@ const GlobalStyles = createGlobalStyle`
     color:#fff;
   }
 
-  .products-main{
-    background-color:#f6f8fa;
-    padding:50px;
-  }
-
-  .products-main a{
-    font-size:1.1em;
-  }
-
   .product h3{
     color:#fff;
     font-size:1.5em;
@@ -109,6 +100,9 @@ const GlobalStyles = createGlobalStyle`
     font-size: 20px;
   }
 
-
+  h2 ~ p{
+    font-size:1.2em;
+  }
 `;
+
 export default GlobalStyles;

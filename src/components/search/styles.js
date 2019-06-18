@@ -61,7 +61,8 @@ const expand = css`
 
 export const SearchWrapper = styled("form")(
   css({
-    mt: [4]
+    mt: [4],
+    mx: [4]
   })
 );
 

@@ -18,15 +18,15 @@ import { Box } from "../style/";
 
 export const template = {
   mobile: {
-    rows: "repeat(2, 1fr)",
+    rows: "repeat(1, 1fr)",
     columns: "repeat(1, 1fr)"
   },
   tablet: {
-    rows: "repeat(2, 1fr)",
+    rows: "repeat(1, 1fr)",
     columns: "repeat(3, 1fr)"
   },
   desktop: {
-    rows: "repeat(2, 1fr)",
+    rows: "repeat(1, 1fr)",
     columns: "repeat(3, 1fr)"
   }
 };

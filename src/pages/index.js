@@ -2,21 +2,28 @@ import React from "react";
 import Layout from "../layout";
 import SEO from "../components/seo";
 import { Link } from "gatsby";
-import { Box } from "../style";
+import { Box, ProductBox } from "../style";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
-
 import { Grid, template } from "../layout/grid";
+import styled from "styled-components";
+
+const ProductLink = styled(props => (
+  <Link style={{ textDecoration: "none" }} {...props} />
+))`
+  display: block;
+`;
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
       <SEO title="Home" />
-      <h2>Pages</h2>
-      <div className="products-main">
+      <h2>Products</h2>
+      <Box mx={[3, 2, 0]}>
         <Grid
-          gridGap={[1, 1, 2]}
+          gridGap={[1, 1, 4]}
+          gridRowGap={[3, 1, 3]}
           gridTemplateColumns={[
             template.mobile.columns,
             template.tablet.columns,
@@ -32,25 +39,27 @@ const IndexPage = ({ data }) => {
             posts.map(post => {
               const { path, title } = post.node.frontmatter;
               const image = post.node.frontmatter.image.childImageSharp.fixed;
-
               return (
-                <div className="markdown" key={path}>
-                  <Box
-                    mt={[2, 3]}
-                    py={[2]}
-                    width={200}
-                    border={"1px solid #FF0000"}
-                  >
-                    <Link to={path}>
-                      {title}
+                <div key={path}>
+                  <ProductLink to={path}>
+                    <ProductBox
+                      className="product-box"
+                      mx={[3, 2, 0]}
+                      py={[2]}
+                      px={[2]}
+                      max-width={200}
+                    >
                       <Img fixed={image} />
-                    </Link>
-                  </Box>
+                      <Box py={[2]} px={[4]} color="black" fontWeight="bold">
+                        {title}
+                      </Box>
+                    </ProductBox>
+                  </ProductLink>
                 </div>
               );
             })}
         </Grid>
-      </div>
+      </Box>
     </Layout>
   );
 };
@@ -70,7 +79,7 @@ export const pageQuery = graphql`
             title
             image {
               childImageSharp {
-                fixed(width: 50) {
+                fixed(width: 50, height: 50) {
                   width
                   height
                   base64

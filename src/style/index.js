@@ -1,5 +1,13 @@
 import * as styledComponents from "styled-components";
-import { space, layout, typography, color, border, width } from "styled-system";
+import {
+  space,
+  layout,
+  typography,
+  color,
+  border,
+  width,
+  flex
+} from "styled-system";
 import { theme } from "./theme";
 
 const {
@@ -18,7 +26,22 @@ const Box = styled.div`
   ${color}
   ${border}
   ${width}
+  ${flex}
 `;
+
+const ProductBox = styled.div(
+  {
+    display: "flex",
+    border: "1px solid #ccc",
+    "&:hover": {
+      "background-color": "#efefef"
+    }
+  },
+  space,
+  layout,
+  typography,
+  color
+);
 
 const Container = styled.div(
   {
@@ -38,7 +61,8 @@ export {
   ThemeProvider,
   theme,
   Box,
-  Container
+  Container,
+  ProductBox
 };
 
 export * from "styled-system";

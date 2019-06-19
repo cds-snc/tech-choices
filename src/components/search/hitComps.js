@@ -3,7 +3,6 @@ import { Highlight, Snippet } from "react-instantsearch-dom";
 import { Link } from "gatsby";
 
 export const PageHit = clickHandler => ({ hit }) => {
-  console.log(hit);
   return (
     <div>
       <Link to={hit.path} onClick={clickHandler}>

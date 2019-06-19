@@ -1,6 +1,5 @@
 import React from "react";
 import { connectSearchBox } from "react-instantsearch-dom";
-
 import { SearchIcon, FormWrap, Input, SearchWrapper } from "./styles";
 
 export default connectSearchBox(({ refine, ...rest }) => (

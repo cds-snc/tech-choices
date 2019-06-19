@@ -47,11 +47,22 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
   const [query, setQuery] = useState(``);
   const [focus, setFocus] = useState(false);
 
-  if (!APP_ID && !SEARCH_KEY) {
+  if (!APP_ID || !SEARCH_KEY) {
     return null;
   }
 
-  const searchClient = algoliasearch(APP_ID, SEARCH_KEY);
+  let searchClient = null;
+
+  try {
+    searchClient = algoliasearch(APP_ID, SEARCH_KEY);
+  } catch (e) {
+    console.log(e.message);
+  }
+
+  if (!searchClient) {
+    return null;
+  }
+
   useClickOutside(ref, () => setFocus(false));
   return (
     <div>

@@ -2,39 +2,27 @@ const queries = require("./src/utils/algolia");
 
 require("dotenv").config();
 
-/*
-{
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Oswald`
-          },
-          {
-            family: `Open Sans`
-          }
-        ]
-      }
-    },
-*/
+let searchPlugin = false;
 
-module.exports = {
+if (process.env.GATSBY_ALGOLIA_APP_ID) {
+  searchPlugin = {
+    resolve: `gatsby-plugin-algolia`,
+    options: {
+      appId: process.env.GATSBY_ALGOLIA_APP_ID,
+      apiKey: process.env.ALGOLIA_ADMIN_KEY,
+      queries,
+      chunkSize: 10000 // default: 1000
+    }
+  };
+}
+
+let config = {
   siteMetadata: {
     title: `CDS Tech Choices`,
     description: `Work In Progress`,
     author: `@gatsbyjs`
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-algolia`,
-      options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        queries,
-        chunkSize: 10000 // default: 1000
-      }
-    },
-
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -88,3 +76,12 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ]
 };
+
+if (searchPlugin) {
+  console.log(`Adding search plugin for APP ID: ${process.env.GATSBY_ALGOLIA_APP_ID}`);
+  config.plugins.push(searchPlugin);
+} else {
+  console.log("Search plugin not added missing APP ID");
+}
+
+module.exports = config;

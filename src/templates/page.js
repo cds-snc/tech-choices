@@ -9,8 +9,8 @@ export default function Template({
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   let { html } = markdownRemark;
 
-  //console.log(html);
-
+  
+  // add spans for styling
   html = html.replace(new RegExp("<li>", "g"), "<li><span>");
   html = html.replace(new RegExp("</li>", "g"), "</span></li>");
 

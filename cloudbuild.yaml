@@ -29,11 +29,11 @@ steps:
         'run', 
         'deploy', 
         'tech-choices', 
-        '--image', 'gcr.io/$PROJECT_ID/tech-choices', 
+        '--image', 
+        'gcr.io/$PROJECT_ID/tech-choices', 
         '--region', 
         'us-central1',
-        '--platform', 
-        'managed'
+        '--allow-unauthenticated'
       ]
 images:
   - 'gcr.io/$PROJECT_ID/tech-choices:$SHORT_SHA'

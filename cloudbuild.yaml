@@ -22,6 +22,8 @@ steps:
         'Dockerfile',
         '.',
       ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/tech-choices:$SHORT_SHA']
   - name: 'gcr.io/cloud-builders/gcloud'
     args: 
       [

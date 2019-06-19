@@ -30,7 +30,7 @@ steps:
         'deploy', 
         'tech-choices', 
         '--image', 
-        'gcr.io/$PROJECT_ID/tech-choices', 
+        'gcr.io/$PROJECT_ID/tech-choices:$SHORT_SHA', 
         '--region', 
         'us-central1',
         '--allow-unauthenticated'

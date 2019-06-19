@@ -34,14 +34,24 @@ const useClickOutside = (ref, handler, events) => {
   });
 };
 
+const APP_ID = process.env.GATSBY_ALGOLIA_APP_ID
+  ? process.env.GATSBY_ALGOLIA_APP_ID
+  : "";
+
+const SEARCH_KEY = process.env.GATSBY_ALGOLIA_SEARCH_KEY
+  ? process.env.GATSBY_ALGOLIA_SEARCH_KEY
+  : "";
+
 export default function Search({ indices, collapse, hitsAsGrid }) {
   const ref = createRef();
   const [query, setQuery] = useState(``);
   const [focus, setFocus] = useState(false);
-  const searchClient = algoliasearch(
-    process.env.GATSBY_ALGOLIA_APP_ID,
-    process.env.GATSBY_ALGOLIA_SEARCH_KEY
-  );
+
+  if (!APP_ID && !SEARCH_KEY) {
+    return null;
+  }
+
+  const searchClient = algoliasearch(APP_ID, SEARCH_KEY);
   useClickOutside(ref, () => setFocus(false));
   return (
     <div>

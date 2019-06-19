@@ -1,10 +1,15 @@
-FROM node:alpine AS builder
-COPY ./package.json .
-RUN yarn install && yarn cache clean
-COPY . .
-CMD ["yarn", "build" ]
+FROM node AS build
 
-ARG LANG
-FROM builder AS nginx
-COPY ./public /usr/share/nginx/html
-EXPOSE 3000
+WORKDIR /app
+ENV NODE_ENV=production
+
+COPY package.json yarn.lock ./
+RUN yarn --frozen-lockfile --non-interactive
+
+COPY . .
+RUN yarn build
+
+FROM nginx
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/public /usr/share/nginx/html

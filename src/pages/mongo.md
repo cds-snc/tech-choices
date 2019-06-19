@@ -2,9 +2,7 @@
 path: "/mongo"
 title: MongoDB
 tags: ["database", "sql"]
-slug: "mongo"
 purpose: "page"
-date: "2019-01-01"
 image: "../images/mongodb.png"
 ---
 

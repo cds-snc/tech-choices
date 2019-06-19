@@ -10,27 +10,8 @@ const pageQuery = `{
           objectID: id
           frontmatter {
             title
-            slug
             tags
-          }
-          excerpt(pruneLength: 5000)
-        }
-      }
-    }
-  }`;
-
-const postQuery = `{
-    posts: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/posts/" } }
-    ) {
-      edges {
-        node {
-          objectID: id
-          frontmatter {
-            title
-            slug
-            date(formatString: "MMM D, YYYY")
-            tags
+            path
           }
           excerpt(pruneLength: 5000)
         }
@@ -50,12 +31,6 @@ const queries = [
     query: pageQuery,
     transformer: ({ data }) => flatten(data.pages.edges),
     indexName: `Pages`,
-    settings
-  },
-  {
-    query: postQuery,
-    transformer: ({ data }) => flatten(data.posts.edges),
-    indexName: `Posts`,
     settings
   }
 ];

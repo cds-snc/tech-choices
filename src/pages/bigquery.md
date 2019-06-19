@@ -2,9 +2,7 @@
 path: "/big-query"
 title: Big Query
 tags: ["static", "react"]
-slug: "big-query"
 purpose: "page"
-date: "2019-01-01"
 image: "../images/big-query.png"
 ---
 

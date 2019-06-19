@@ -2,9 +2,7 @@
 path: "/firestore"
 title: Firestore
 tags: ["database"]
-slug: "firestore"
 purpose: "page"
-date: "2019-01-01"
 image: "../images/firebase.png"
 ---
 

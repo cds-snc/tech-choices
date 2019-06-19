@@ -22,13 +22,19 @@ steps:
         'Dockerfile',
         '.',
       ]
-    secretEnv: ['GATSBY_ALGOLIA_APP_ID', 'GATSBY_ALGOLIA_SEARCH_KEY', 'ALGOLIA_ADMIN_KEY']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: 
+      [
+        'beta', 
+        'run', 
+        'deploy', 
+        'tech-choices', 
+        '--image', 'gcr.io/$PROJECT_ID/tech-choices', 
+        '--region', 
+        'us-central1',
+        '--platform', 
+        'managed'
+      ]
 images:
   - 'gcr.io/$PROJECT_ID/tech-choices:$SHORT_SHA'
   - 'gcr.io/$PROJECT_ID/tech-choices:latest'
-secrets:
-- kmsKeyName: projects/tech-choices/locations/global/keyRings/build/cryptoKeys/env
-  secretEnv:
-    GATSBY_ALGOLIA_APP_ID: CiQAE1y5aUnS88vWPbC4/xviGC9aDW4S617y6TkBjAALCEUjKFMSMwDiUD05scbEo1/JPCJnYyAsehvHkMAnLVpbdtDEJ8KG1tNvL0j7hR9lfJqZRi0P2AlxSw==
-    GATSBY_ALGOLIA_SEARCH_KEY: CiQAE1y5aXwNzXVgFs3sIuVebVK1PM+drA5xKgWST9F9UGiELfsSSQDiUD05xS/b40ekhH+vtvFHK2CU1n6+rbRUBGDqTOu/aJ9+aRrLKnWeONM0buTvZIOHYW6jAVWE1QXfEBw9cZVz96Ntpts4F4A=
-    ALGOLIA_ADMIN_KEY: CiQAE1y5aehrQClyd/J08AsZDFsR6TZD0acaJ+FVe8ujOWnm46ISSADiUD05hFvanrAdngl9wXdU3Q9Wr9GgKuhya4mCHcVw5A3ID6rk9u+yA4PbDAGdrccYJ6aASy3l05D8mj6OYLww4AquJvB22Q==

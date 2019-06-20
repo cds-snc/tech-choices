@@ -3,7 +3,7 @@ const path = require("path");
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const pageTemplate = path.resolve(`src/templates/page.js`);
+  const productTemplate = path.resolve(`src/layout/product-page.js`);
 
   return graphql(`
     {
@@ -27,7 +27,7 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: pageTemplate,
+        component: productTemplate,
         context: {} // additional data can be passed via context
       });
     });

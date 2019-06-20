@@ -20,7 +20,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-
       <Helmet>
         <script
           type="module"

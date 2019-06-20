@@ -5,7 +5,9 @@ import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import Header from "../components/header";
 import Search from "../components/search";
-const searchIndices = [{ name: `Pages`, title: `Products`, hitComp: `PageHit` }];
+const searchIndices = [
+  { name: `Pages`, title: `Products`, hitComp: `PageHit` }
+];
 
 /* https://github.com/gregoralbrecht/gatsby-starter-styled/blob/master/src/components/Layout/index.jsx  */
 
@@ -30,8 +32,10 @@ const Layout = ({ children }) => (
               <Search collapse indices={searchIndices} />
               <main>{children}</main>
             </Box>
-            <Box pt={4} mt={4} as="footer">
-              © {new Date().getFullYear()}
+            <Box as="footer">
+              <Box px={[4, 2]} py={[4, 4]}>
+                © {new Date().getFullYear()}
+              </Box>
             </Box>
           </Container>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../layout";
 import SEO from "../components/seo";
 import { Link } from "gatsby";
@@ -19,6 +20,18 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
+
+      <Helmet>
+        <script
+          type="module"
+          src="https://unpkg.com/@cdssnc/cds-tag@0.0.1/dist/cds-tag/cds-tag.esm.js"
+        ></script>
+        <script
+          nomodule
+          src="https://unpkg.com/@cdssnc/cds-tag@0.0.1/dist/cds-tag.js"
+        ></script>
+        <script src=""></script>
+      </Helmet>
       <h2>Products</h2>
       <Box mx={[3, 2, 0]}>
         <Grid

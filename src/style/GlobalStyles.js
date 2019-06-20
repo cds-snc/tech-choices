@@ -93,6 +93,12 @@ const GlobalStyles = createGlobalStyle`
 
   h2 ~ p{
     font-size:1.2em;
+    padding-left:1.2em;
+    padding-right:1.2em;
+  }
+
+  cds-tag{
+    display:inline-block;
   }
 `;
 

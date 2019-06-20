@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 import { Box, ProductBox } from "../style";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
-import { Grid, template } from "../layout/grid";
+import { Grid, template } from "../layout/product-grid";
 import styled from "styled-components";
 
 const ProductLink = styled(props => (

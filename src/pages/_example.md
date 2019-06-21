@@ -3,7 +3,7 @@ path: "/slug-for-product"
 title: Product Name
 tags: ["project name", "database" ,"other tags..."]
 purpose: "page"
-image: "../images/product-image.png"
+image: "../images/default.png"
 ---
 
 ## Product Name

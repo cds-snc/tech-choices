@@ -50,7 +50,23 @@ const IndexPage = ({ data }) => {
           {posts &&
             posts.map(post => {
               const { path, title } = post.node.frontmatter;
-              const image = post.node.frontmatter.image.childImageSharp.fixed;
+              // ignore smaple file
+              if (path === "/slug-for-product") {
+                return null;
+              }
+              let image = "";
+
+              if (
+                post &&
+                post.node &&
+                post.node.frontmatter &&
+                post.node.frontmatter.image &&
+                post.node.frontmatter.image.childImageSharp &&
+                post.node.frontmatter.image.childImageSharp.fixed
+              ) {
+                image = post.node.frontmatter.image.childImageSharp.fixed;
+              }
+
               return (
                 <div key={path}>
                   <ProductLink to={path}>

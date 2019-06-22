@@ -18,10 +18,11 @@ Recommended to implement Canada.ca Design System by Principle Publisher.
 - Decent Documentation
 - Implements Canada.ca Design Guide
 - Lots of experience in government
+- Since most government sites use it packages should be cached locally
 
 ### Cons
 - Old
 - Doesn't work with some modern frameworks (i.e: Reactjs)
 - Lack of resources to maintain
-- Large packages
+- Large package size means slow to download
 <div>

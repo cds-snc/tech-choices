@@ -29,7 +29,5 @@ export const getPageImage = page => {
     image = page.markdownRemark.frontmatter.image.childImageSharp.fluid;
   }
 
-  console.log("image", image);
-
   return image;
 };

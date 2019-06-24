@@ -44,6 +44,7 @@ export const pageQuery = graphql`
         image {
           childImageSharp {
             fluid(maxWidth: 100) {
+              sizes
               base64
               tracedSVG
               aspectRatio

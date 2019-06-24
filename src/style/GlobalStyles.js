@@ -91,7 +91,7 @@ const GlobalStyles = createGlobalStyle`
     color: #fff;
   }
 
-  p{
+  p:first{
     font-size:1.2em;
     padding-left:1.2em;
     padding-right:1.2em;

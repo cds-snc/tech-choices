@@ -26,6 +26,6 @@ Recommended to implement Canada.ca Design System by Principle Publisher.
 - Lack of resources to maintain
 - Large package size means slow to download
 - latest version of WET 4 has insecure jquery library
-- Heaviliy reliant on jquery
 - Doesn't work well with Modern Frameworks that have Server Side Rendering
+- Heaviliy reliant on jQuery
   <div>

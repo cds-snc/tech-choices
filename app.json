@@ -1,0 +1,14 @@
+{
+    "addons": [
+    ],
+    "buildpacks": [
+    ],
+    "env": {
+    },
+    "formation": {
+    },
+    "name": "tech-choices",
+    "scripts": {
+    },
+    "stack": "container"
+  }

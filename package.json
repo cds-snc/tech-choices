@@ -41,6 +41,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
+    "heroku-postbuild": "gatsby build",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""

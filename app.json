@@ -1,14 +1,10 @@
 {
-    "addons": [
-    ],
-    "buildpacks": [
-    ],
-    "env": {
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
     },
-    "formation": {
-    },
-    "name": "tech-choices",
-    "scripts": {
-    },
-    "stack": "container"
-  }
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static"
+    }
+  ]
+}

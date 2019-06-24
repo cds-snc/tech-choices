@@ -6,8 +6,6 @@ purpose: "page"
 image: "../images/big-query.png"
 ---
 
-## Big Query
-
 Big Query is a platform as a service by Google for big data sets. You can use SQL on the data to extract information.
 
 <div class="product">

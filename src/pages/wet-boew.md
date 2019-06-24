@@ -6,8 +6,6 @@ purpose: "page"
 image: "../images/wet-boew.png"
 ---
 
-## Product Name
-
 The Web Experience Toolkit is a collaborative open source project that is led by the Government of Canada. 
 Recommended to implement Canada.ca Design System by Principle Publisher.
 

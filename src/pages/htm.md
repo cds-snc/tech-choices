@@ -6,8 +6,6 @@ purpose: "page"
 image: "../images/htm.png"
 ---
 
-## HTM (Hyperscript Tagged Markup)
-
 [Hyperscript Tagged Markup](https://github.com/developit/htm): JSX alternative using [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). HTM allows us to write components which are compiled on the server and served as HTML to the browser.
 
 <div class="product">

@@ -6,9 +6,7 @@ purpose: "page"
 image: "../images/firebase.png"
 ---
 
-## Firestore
-
-Summary orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+Cloud Firestore is a flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud Platform.
 
 <div class="product">
 

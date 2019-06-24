@@ -8,6 +8,7 @@ import Img from "gatsby-image";
 import { graphql } from "gatsby";
 import { Grid, template } from "../layout/product-grid";
 import styled from "styled-components";
+import { getImage } from "../utils/getImage";
 
 const ProductLink = styled(props => (
   <Link style={{ textDecoration: "none" }} {...props} />
@@ -54,18 +55,8 @@ const IndexPage = ({ data }) => {
               if (path === "/slug-for-product") {
                 return null;
               }
-              let image = "";
 
-              if (
-                post &&
-                post.node &&
-                post.node.frontmatter &&
-                post.node.frontmatter.image &&
-                post.node.frontmatter.image.childImageSharp &&
-                post.node.frontmatter.image.childImageSharp.fixed
-              ) {
-                image = post.node.frontmatter.image.childImageSharp.fixed;
-              }
+              const image = getImage(post);
 
               return (
                 <div key={path}>

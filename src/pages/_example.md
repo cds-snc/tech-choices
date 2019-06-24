@@ -6,7 +6,7 @@ purpose: "page"
 image: "../images/default.png"
 ---
 
-## Product Name
+## Product Name Here
 
 Summary ...
 

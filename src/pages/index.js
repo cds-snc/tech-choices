@@ -30,7 +30,6 @@ const IndexPage = ({ data }) => {
           nomodule
           src="https://unpkg.com/@cdssnc/cds-tag@0.0.1/dist/cds-tag.js"
         ></script>
-        <script src=""></script>
       </Helmet>
       <h2>Products</h2>
       <Box mx={[3, 2, 0]}>

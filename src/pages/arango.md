@@ -23,4 +23,7 @@ ArangoDB is a native multi-model, open-source database with flexible data models
 - Transaction support
 - [Distributed Graph](https://www.arangodb.com/docs/devel/graphs-pregel.html) analysis algorithms: [centrality, community detection, etc.](https://www.arangodb.com/docs/devel/graphs-pregel.html#available-algorithms)
 
+### Cons
+- Small support community
+
 <div>

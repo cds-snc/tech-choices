@@ -8,6 +8,7 @@ import Img from "gatsby-image";
 import { graphql } from "gatsby";
 import { Grid, template } from "../layout/product-grid";
 import styled from "styled-components";
+import { getImage } from "../utils/getImage";
 
 const ProductLink = styled(props => (
   <Link style={{ textDecoration: "none" }} {...props} />
@@ -29,7 +30,6 @@ const IndexPage = ({ data }) => {
           nomodule
           src="https://unpkg.com/@cdssnc/cds-tag@0.0.1/dist/cds-tag.js"
         ></script>
-        <script src=""></script>
       </Helmet>
       <h2>Products</h2>
       <Box mx={[3, 2, 0]}>
@@ -54,18 +54,8 @@ const IndexPage = ({ data }) => {
               if (path === "/slug-for-product") {
                 return null;
               }
-              let image = "";
 
-              if (
-                post &&
-                post.node &&
-                post.node.frontmatter &&
-                post.node.frontmatter.image &&
-                post.node.frontmatter.image.childImageSharp &&
-                post.node.frontmatter.image.childImageSharp.fixed
-              ) {
-                image = post.node.frontmatter.image.childImageSharp.fixed;
-              }
+              const image = getImage(post);
 
               return (
                 <div key={path}>
@@ -99,7 +89,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___title], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___title], order: ASC }) {
       edges {
         node {
           frontmatter {

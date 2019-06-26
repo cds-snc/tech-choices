@@ -6,8 +6,6 @@ purpose: "page"
 image: "../images/default.png"
 ---
 
-## Product Name
-
 Summary ...
 
 <div class="product">

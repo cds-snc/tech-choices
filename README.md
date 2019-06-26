@@ -14,8 +14,6 @@ purpose: "page"
 image: "../images/product-image.png"
 ---
 
-## Product Name
-
 Summary ...
 
 <div class="product">

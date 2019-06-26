@@ -1,12 +1,10 @@
 ---
 path: "/c-sharp-net-core"
-title: C#/.NET Core
+title: C# and .NET Core
 tags: ["C#", ".NET"]
 purpose: "page"
 image: "../images/logo-net-core.png"
 ---
-
-## C# and .NET Core
 
 .NET Core is a cross-platform version of .NET for building websites, services, and console apps.
 

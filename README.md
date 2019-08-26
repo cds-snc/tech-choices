@@ -1,3 +1,25 @@
+
+## Purpose
+
+To help document when / why to make technology choices for your product.
+
+- Overall things to consider:
+- Learning curve for others to pick up
+- Ease of use
+- Flexibility
+- Security
+- Speed
+
+## Install
+
+```bash
+npm install
+npm run start
+```
+
+- Open http://localhost:8000
+- Note locally the search box will not be available unless you have the Algolia .env variables setup.
+
 ## Adding a product
 
 Create a new "product" Markdown file in this directory https://github.com/cds-snc/tech-choices/tree/master/src/pages

@@ -3,7 +3,7 @@ path: "/ruby-on-rails"
 title: Ruby on Rails
 tags: ["framework"]
 purpose: "page"
-image: "../images/rails-logo.svg"
+image: "../images/ruby-on-rails-logo.png"
 ---
 
 Ruby on Rails is a web application development framework.

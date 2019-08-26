@@ -36,6 +36,7 @@ steps:
         '--region', 
         'us-central1',
         '--allow-unauthenticated'
+        '--platform gke' 
       ]
 images:
   - 'gcr.io/$PROJECT_ID/tech-choices:$SHORT_SHA'

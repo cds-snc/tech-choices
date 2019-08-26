@@ -13,8 +13,8 @@ To help document when / why to make technology choices for your product.
 ## Install
 
 ```bash
-npm install
-npm run start
+yarn install
+yarn run start
 ```
 
 - Open http://localhost:8000

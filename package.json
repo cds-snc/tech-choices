@@ -2,7 +2,7 @@
   "name": "cds-tech-choices",
   "private": true,
   "description": "",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "CDS",
   "scripts": {
     "build": "gatsby build",

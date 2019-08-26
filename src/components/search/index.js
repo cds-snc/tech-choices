@@ -47,6 +47,8 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
   const [query, setQuery] = useState(``);
   const [focus, setFocus] = useState(false);
 
+  useClickOutside(ref, () => setFocus(false));
+
   if (!APP_ID || !SEARCH_KEY) {
     return null;
   }
@@ -63,7 +65,7 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
     return null;
   }
 
-  useClickOutside(ref, () => setFocus(false));
+  
   return (
     <div>
       <InstantSearch
